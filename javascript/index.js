@@ -107,14 +107,15 @@ async function makeBroccoli() {
     document.querySelector("#broccoli").innerHTML += `<li>${step6}</li>`;
     step7=await obtainInstruction('broccoli',7);
     document.querySelector("#broccoli").innerHTML += `<li>${step7}</li>`;
-    step8=await obtainInstruction('broccoli',8);
-    document.querySelector("#broccoli").innerHTML += `<li>${step8}</li>`;
-    document.querySelector("#broccoli").innerHTML += `<li>Broccoli is ready!</li>`;
+    
     
   }catch (error){
-    console.log(error);
-  }
-
+    console.log(error);}
+   
+    document.querySelector("#broccoliImg").removeAttribute("hidden");
+    document.querySelector("#broccoli").innerHTML += `<li>Broccoli is ready!</li>`;
+}
+makeBroccoli();
 // ___________________________________________________________________Bonus 2 - Promise all______________________________________________________________
 
 const brusselsSproutsSteps = [];
